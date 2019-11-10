@@ -12,7 +12,9 @@
 " alt="">
       </div>
     </div>
-    
+<% if @user == current_user %>
+<%= link_to 'お気に入り一覧', likes_user_path(current_user) %>
+<% end %>
 <%= render 'relationships/follow_button', user: @user %>
 
 
